@@ -1,0 +1,111 @@
+.error-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  
+  .error-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  
+  @media (min-width: 1024px) {
+    .error-container {
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+  }
+  
+  .error-content {
+    text-align: center;
+  }
+  
+  @media (min-width: 1024px) {
+    .error-content {
+      text-align: left;
+    }
+  }
+  
+  .error-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 9999px;
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+  }
+  
+  .error-title {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  @media (min-width: 768px) {
+    .error-title {
+      font-size: 3.75rem;
+    }
+  }
+  
+  .error-message {
+    font-size: 1.125rem;
+    color: var(--muted-foreground);
+    margin-bottom: 2rem;
+    max-width: 32rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @media (min-width: 1024px) {
+    .error-message {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  
+  .error-image-container {
+    display: none;
+    position: relative;
+  }
+  
+  @media (min-width: 1024px) {
+    .error-image-container {
+      display: block;
+    }
+  }
+  
+  .error-image {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  /* Animation pour l'élément 404 */
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  .error-badge {
+    animation: float 6s ease-in-out infinite;
+  }
